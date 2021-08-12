@@ -1,5 +1,10 @@
 .header {
-  background-color: rgba(13, 17, 22, 0.98);
+  /* background-color: rgba(13, 17, 22, 0.98); */
+  background-color: #0c1621;
+}
+
+.header__top-bar {
+  padding: 20px;
 }
 
 .header-inner {
@@ -12,12 +17,13 @@
   color: #b1b2b5;
 }
 
-.fixed-container {
-
+.header__logo-container {
+  display: flex;
+  justify-content: center;
 }
 
 .header__logo {
-  width: 130px;
+  width: 500px;
 }
 
 .header__img {
