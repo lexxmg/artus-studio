@@ -4,7 +4,7 @@
 }
 
 .header__top-bar {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .header-inner {
@@ -23,7 +23,7 @@
 }
 
 .header__logo {
-  width: 500px;
+  width: 166px;
 }
 
 .header__img {
@@ -35,7 +35,7 @@
 }
 
 .header-nav {
-
+  font-size: 20px;
 }
 
 .header-nav__list {
