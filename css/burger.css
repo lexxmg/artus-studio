@@ -94,7 +94,7 @@
 	}
 }
 
-/* @media (max-width: 1009px) {
+@media (max-width: 414px) {
 	.header__burger {
 		width: 24px;
 		height: 24px;
@@ -127,4 +127,4 @@
 		top: 0;
 	}
 
-} */
+}
