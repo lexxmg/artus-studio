@@ -89,13 +89,16 @@
 }
 
 @media (max-width: 850px) {
-  .header-nav-list {
+  .header-nav {
     position: absolute;
-    top: 20px;
+    top: 100px;
     left: 20px;
 
     /* display: flex; */
     display: none;
+  }
+
+  .header-nav-list {
     flex-direction: column;
   }
 
