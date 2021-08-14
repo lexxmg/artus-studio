@@ -3,29 +3,32 @@
 
 $(document).ready(function() {
   const btnMenu = $('.js-burger'),
+        nav = $('.header-nav'),
         burgerItem = $('.burger__item'),
         menu = $('.header-nav'),
         body = $('body');
 
-  btnMenu.on('click', function(){
+  btnMenu.on('click', function() {
     if(btnMenu.attr('aria-expanded') === 'false') {
-      menu.slideDown(function(){
+      menu.slideDown(function() {
         btnMenu.attr('aria-expanded', 'true');
         burgerItem.addClass('burger--animate');
       });
     } else {
-      menu.slideUp(function(){
+      menu.slideUp(function() {
         btnMenu.attr('aria-expanded', 'false');
         burgerItem.removeClass('burger--animate');
+        nav.removeAttr('style');
       });
     }
   });
 
   body.on('click', () => {
     if (btnMenu.attr('aria-expanded') === 'true') {
-      menu.slideUp(function(){
+      menu.slideUp(function() {
         btnMenu.attr('aria-expanded', 'false');
         burgerItem.removeClass('burger--animate');
+        nav.removeAttr('style');
       });
     }
   });
