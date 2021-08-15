@@ -5,7 +5,7 @@
 
 .header__top-bar {
   position: fixed;
-  z-index: 200;
+  z-index: 1000;
 
   width: 100%;
 
@@ -22,11 +22,6 @@
   /* padding: 0 20px; */
 
   color: #b1b2b5;
-}
-
-.header__logo-container {
-  display: flex;
-  justify-content: center;
 }
 
 .header__logo {
@@ -91,6 +86,46 @@
   font-size: 40px;
 
   color: #a46738;
+}
+
+.header__parallax {
+
+}
+
+.header-parallax {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  padding: 96px 0 0 0;
+
+  overflow: hidden;
+}
+
+.header-parallax__img {
+  display: block;
+
+  margin: -100px 0 0 0;
+}
+
+.header-parallax__title-container {
+  position: absolute;
+  bottom: 100px;
+  left: 20%;
+  z-index: 100;
+
+  width: 400px;
+
+  color: #b1b2b5;
+}
+
+.header-parallax__title {
+
+}
+
+.header-parallax__subtitle {
+
 }
 
 .hidden {
