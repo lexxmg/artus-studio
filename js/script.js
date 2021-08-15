@@ -5,7 +5,9 @@ $(document).ready(function() {
   const btnMenu = $('.js-burger'),
         nav = $('.header-nav'),
         burgerItem = $('.burger__item'),
+        img = $('.header-parallax__img'),
         menu = $('.header-nav'),
+        header = $('.header'),
         body = $('body');
 
   btnMenu.on('click', function() {
@@ -30,6 +32,17 @@ $(document).ready(function() {
         burgerItem.removeClass('burger--animate');
         nav.removeAttr('style');
       });
+    }
+  });
+
+  $(window).on('scroll', function(event) {
+    const scroll = $(this).scrollTop();
+
+    console.log(scroll);
+    console.log( header.height() );
+
+    if ( scroll < header.height() ) {
+      img.css({'marginTop': -(scroll * 0.4) + 'px'});
     }
   });
 });
