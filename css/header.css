@@ -106,26 +106,42 @@
 .header-parallax__img {
   display: block;
 
+  width: 100%;
+  height: 130%;
+
   margin: -100px 0 0 0;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .header-parallax__title-container {
   position: absolute;
-  bottom: 100px;
-  left: 20%;
+  top: 45%;
+  left: 0;
   z-index: 100;
 
-  width: 400px;
+  width: 100%;
 
   color: #b1b2b5;
 }
 
-.header-parallax__title {
+.header-parallax__title-container-inner {
+  width: 400px;
 
+  margin: 0 auto;
+}
+
+.header-parallax__title {
+  text-align: center;
+
+  font-size: 50px;
 }
 
 .header-parallax__subtitle {
+  margin: 10px 0 0 0;
 
+  text-align: center;
 }
 
 .hidden {
@@ -140,10 +156,18 @@
 
     /* display: flex; */
     display: none;
+
+    padding: 10px 20px;
+
+    background-color: #0c1621;
   }
 
   .header-nav-list {
     flex-direction: column;
+  }
+
+  .header-nav-list__item {
+    margin: 0 0 10px 0;
   }
 
   .header-nav__address {
@@ -166,5 +190,17 @@
 
   .header-nav__link-tel {
     font-size: 30px;
+  }
+
+  .header-parallax__title-container-inner {
+    width: 300px;
+  }
+
+  .header-parallax__title {
+    font-size: 42px;
+  }
+
+  .header-parallax__subtitle {
+    font-size: 19px;
   }
 }
