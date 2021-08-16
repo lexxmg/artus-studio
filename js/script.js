@@ -6,6 +6,7 @@ $(document).ready(function() {
         nav = $('.header-nav'),
         burgerItem = $('.burger__item'),
         img = $('.header-parallax__img'),
+        titleHeader = $('.header-parallax__title-container-inner'),
         menu = $('.header-nav'),
         header = $('.header'),
         body = $('body');
@@ -43,6 +44,9 @@ $(document).ready(function() {
 
     if ( scroll < header.height() ) {
       img.css({'marginTop': -(scroll * 0.4) + 'px'});
+
+      const s = scroll * 0.35;
+      titleHeader.css( 'transform', `translateY(${s}px)` );
     }
   });
 });
