@@ -9,6 +9,7 @@ $(document).ready(function() {
         titleHeader = $('.header-parallax__title-container-inner'),
         menu = $('.header-nav'),
         header = $('.header'),
+        topBar = $('.header__top-bar'),
         body = $('body');
 
   btnMenu.on('click', function() {
@@ -39,13 +40,10 @@ $(document).ready(function() {
   $(window).on('scroll', function(event) {
     const scroll = $(this).scrollTop();
 
-    console.log(scroll);
-    console.log( header.height() );
-
-    if ( scroll < header.height() ) {
+    if ( scroll < ( header.height() - topBar.height() ) ) {
       img.css({'marginTop': -(scroll * 0.4) + 'px'});
 
-      const s = scroll * 0.35;
+      const s = scroll * 0.6;
       titleHeader.css( 'transform', `translateY(${s}px)` );
     }
   });
