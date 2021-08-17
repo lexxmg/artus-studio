@@ -10,7 +10,7 @@ $(document).ready(function() {
         menu = $('.header-nav'),
         header = $('.header'),
         topBar = $('.header__top-bar'),
-        body = $('body');
+        body = $('body, html');
 
   btnMenu.on('click', function() {
     if(btnMenu.attr('aria-expanded') === 'false') {
@@ -46,5 +46,21 @@ $(document).ready(function() {
       const s = scroll * 0.6;
       titleHeader.css( 'transform', `translateY(${s}px)` );
     }
+  });
+
+  $('.js-nav').on('click', function(event){
+    event.preventDefault();
+
+    let heightTopBar = topBar.height();
+    let href = $(this).attr('href');
+    let offset = $(href).offset().top;
+
+    console.log(href);
+    console.log($(href));
+
+    console.log(offset);
+
+    body.animate({scrollTop: offset - topBar.height()}, 700);
+    //$('.header__top').animate({top: offset});
   });
 });
