@@ -1,3 +1,29 @@
 .section-yoga {
-  min-height: 400px;
+  /* min-height: 400px; */
+
+  padding: 0 20px 20px;
+}
+
+.section-yoga__title {
+  padding: 20px 0;
+
+  border-bottom: 1px solid #a46738;
+
+  text-align: center;
+}
+
+.section-yoga__content-container {
+  max-width: 800px;
+
+  margin: 20px auto 0;
+}
+
+.section-yoga__text {
+  margin: 0 0 10px 0;
+
+  text-indent: 1em;
+}
+
+.section-yoga__text:last-child {
+  margin: 0;
 }
