@@ -63,4 +63,40 @@ $(document).ready(function() {
     body.animate({scrollTop: offset - topBar.height()}, 700);
     //$('.header__top').animate({top: offset});
   });
+
+  // $('.slick').slick({
+  //   infinite: true,
+  //   centerMode: true,
+  //   centerPadding: '60px',
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1
+  // });
+
+  $('.slick').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 414,
+        settings: {
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
